@@ -125,7 +125,7 @@
     <br>
           <center>
           	<span style="font-size:32px">PT4AL: Using Self-Supervised Pretext Tasks for Active Learning (ECCV 2022)</span>
-	  		  <table align=center width=600px>
+	  		  <table align=center width=650px>
 	  			  <tr>
 	  	              <td align=center>
 	  					<center>
@@ -178,7 +178,7 @@
 	  		  <center><h1>Abstract</h1></center>
 	  		  <tr>
 	  		  	<td><p>
-					Many existing approaches for unsupervised domain adaptation (UDA) focus on adapting under only data distribution shift and offer limited success under additional cross-domain label distribution shift. Recent work based on self-training using target pseudolabels has shown promise, but on challenging shifts pseudolabels may be highly unreliable and using them for self-training may cause error accumulation and domain misalignment. We propose Selective Entropy Optimization via Committee Consistency (SENTRY), a UDA algorithm that judges the reliability of a target instance based on its predictive consistency under a committee of random image transformations. Our algorithm then selectively minimizes predictive entropy to increase confidence on highly consistent target instances, while maximizing predictive entropy to reduce confidence on highly inconsistent ones. In combination with pseudolabel-based approximate target class balancing, our approach leads to  significant improvements over the state-of-the-art on 27/31 domain shifts from standard UDA benchmarks as well as benchmarks designed to stress-test adaptation under label distribution shift. Our code is available at <a href="https://github.com/virajprabhu/SENTRY">this link</a>.
+					Labeling a large set of data is expensive. Active learning aims to tackle this problem by asking to annotate only the most informative data from the unlabeled set. We propose a novel active learning approach that utilizes self-supervised pretext tasks and a unique data sampler to select data that are both difficult and representative. We discover that the loss of a simple self-supervised pretext task, such as rotation prediction, is closely correlated to the downstream task loss. Before the active learning iterations, the pretext task learner is trained on the unlabeled set, and the unlabeled data are sorted and split into batches by their pretext task losses. In each active learning iteration, the main task model is used to sample the most uncertain data in a batch to be annotated. We evaluate our method on various image classification and segmentation benchmarks and achieve compelling performances on CIFAR10, Caltech-101, ImageNet, and Cityscapes. We further show that our method performs well on imbalanced datasets, and can be an effective solution to the cold-start problem where active learning performance is affected by the randomly sampled initial labeled set. Code is available at <a>https://github.com/johnsk95/PT4AL</a>.
 					</p>
 	  		    </td>
 	  		  </tr>
